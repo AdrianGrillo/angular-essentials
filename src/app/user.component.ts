@@ -5,7 +5,7 @@ import { Component} from "@angular/core";
   template: `
     <input type='text' [(ngModel)]='name'>
     <p>Hello</p>
-    <p>test</p>
+    <p>TEST</p>
     <h1>{{name}}</h1>
   `
 })
