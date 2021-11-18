@@ -1,4 +1,4 @@
-import { Component, Input} from "@angular/core";
+import { Component} from "@angular/core";
 
 @Component({
   selector: 'app-user',
@@ -11,5 +11,5 @@ import { Component, Input} from "@angular/core";
 })
 
 export  class UserComponent {
-  @Input() name = 'Adrian'
+  name = 'Adrian'
 }
