@@ -7,6 +7,7 @@ import { Component, Input, Output, EventEmitter } from "@angular/core";
     <p>Hello</p>
     <p>TEST</p>
     <h1>{{name}}</h1>
+    <app-user-detail></app-user-detail>
   `
 })
 
