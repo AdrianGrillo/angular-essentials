@@ -5,4 +5,5 @@
 </div>
 
 <app-user [name]="rootName" (nameChanged)="onNameChanged($event)"></app-user>
+<br />
 <app-cart-component [items]="rootItems" (itemChanged)="onItemChanged($event)" (itemAdded)="onItemWasAdded($event)"></app-cart-component>
