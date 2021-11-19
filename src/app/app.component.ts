@@ -10,7 +10,7 @@ export class AppComponent {
   rootName = 'Adrian'
 
   rootItem = 'Input an item'
-  items = ['Apples', 'Bananas', 'Cherries']
+  rootItems = ['Apples', 'Bananas', 'Cherries']
 
   onNameChanged(newName: string) {
     this.rootName = newName
@@ -20,8 +20,8 @@ export class AppComponent {
     this.rootItem = newItem
   }
 
-  addItem(item: string) {
-    this.items.push(item)
-    console.log(this.items)
+  onItemWasAdded(newItem: string) {
+    this.rootItems.push(newItem)
+    console.log(this.rootItems)
   }
 }

@@ -3,23 +3,22 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 @Component({
   selector: 'app-cart-component',
   template: `
-    <input type='text' (input)="onItemInput($event)">
+    <input type='text' (input)="onItemInput($event)" [(ngModel)]="newItem">
     <button text='Add Item' (click)="onAddItem($event)">Add Item</button>
-      <h1>{{item}}</h1>
   `,
   styleUrls: ['./cart-component.component.css']
 })
 export class CartComponentComponent {
-  items = []
-  @Input() item
+  @Input() items = []
+  newItem = ''
   @Output() itemChanged = new EventEmitter<string>()
-  @Output() clickedAddItem = new EventEmitter<string>()
+  @Output() itemAdded = new EventEmitter<string>()
 
   onItemInput = event => {
     this.itemChanged.emit(event.target.value)
   }
 
   onAddItem = event => {
-    this.clickedAddItem.emit(this.item)
+    this.itemAdded.emit(this.newItem)
   }
 }
